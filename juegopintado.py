@@ -1,6 +1,5 @@
 from turtle import *
 from freegames import vector
-from fabric.colors import yellow
 
 def line(start, end):
     #función para crear una linea desde el primer punto seleccionada al segundo
@@ -18,7 +17,7 @@ def square(start, end):
     down()
     begin_fill()
     
-    #con un for que hace la forma del cuadrado 
+    #con un for que hace la forma del cuadrado
     for count in range(4):
         forward(end.x - start.x)
         left(90)
@@ -26,8 +25,11 @@ def square(start, end):
     end_fill()
 
 def circle(start, end):
-    t = turtle.Turtle()
-    t.circle(50)
+    "Draw square from start to end."
+    uo()
+    goto(start.x,start.y)
+    down()
+    dot((end.x-star.x)*2)
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
