@@ -1,5 +1,6 @@
 from turtle import *
 from freegames import vector
+from fabric.colors import yellow
 
 def line(start, end):
     #función para crear una linea desde el primer punto seleccionada al segundo
@@ -25,8 +26,8 @@ def square(start, end):
     end_fill()
 
 def circle(start, end):
-    "Draw circle from start to end."
-    pass  # TODO
+    t = turtle.Turtle()
+    t.circle(50)
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
@@ -62,6 +63,7 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+onkey(lambda: color ('yellow'), 'Y') #color agregado
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
