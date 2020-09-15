@@ -25,8 +25,8 @@ def square(start, end):
     end_fill()
 
 def circle(start, end):
-    "Draw square from start to end."
-    uo()
+    "Draw circle from start to end."
+    up()
     goto(start.x,start.y)
     down()
     dot((end.x-star.x)*2)
