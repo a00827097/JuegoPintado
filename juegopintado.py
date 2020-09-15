@@ -30,8 +30,24 @@ def circle(start, end):
     t.circle(50)
 
 def rectangle(start, end):
-    "Draw rectangle from start to end."
-    pass  # TODO
+    def rectangle(start, end):
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+    if ((end.x - start.x)*(end.x - start.x)) > ((end.y - start.y)*(end.y - start.y)):
+        for count in range(2):
+            forward(end.x - start.x)
+            left(90)
+            forward(end.x/2 - start.x/2)
+            left(90)
+    elif ((end.y - start.y)*(end.y - start.y)) > ((end.x - start.x)*(end.x - start.x)):
+        for count in range(2):
+            forward(end.y/2 - start.y/2)
+            left(90)
+            forward(end.y - start.y)
+            left(90)
+    end_fill()
 
 def triangle(start, end):
     "Draw triangle from start to end."
